@@ -41,7 +41,7 @@ def load_season(code: str, session: requests.Session) -> pd.DataFrame | None:
     df["Season"] = _season_label(code)
     df["SeasonCode"] = code
     df["SourceURL"] = url
-    df["Date"] = pd.to_datetime(df["Date"], dayfirst=True, errors="coerce")
+    df["Date"] = pd.to_datetime(df["Date"], dayfirst=True, format="mixed", errors="coerce")
     return df
 
 

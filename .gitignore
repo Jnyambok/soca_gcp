@@ -223,3 +223,6 @@ keys/
 
 # macOS
 .DS_Store
+
+# Personal notes
+BRANCH_WORKFLOW.md
