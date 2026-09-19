@@ -1,5 +1,6 @@
 # scripts/run_pipeline.py
 from src.ingest import build_dataframe
+from src.aggregate import build_summary
 from src.load_bq import get_client, ensure_dataset, load_matches
 
 
@@ -11,6 +12,7 @@ def main():
     client = get_client()
     ensure_dataset(client)
     load_matches(df, client)
+    build_summary(client)
     print("done.")
 
 
